@@ -11,8 +11,9 @@ namespace Rou.BlogPost.Api.Controllers {
     public class PostController : Controller {
         private IPostService _postService;
         private readonly ILogger<PostController> _logger;
-        public PostController (IPostService postService) {
+        public PostController (IPostService postService, ILogger<PostController> logger) {
             _postService = postService;
+            _logger = logger;
         }
 
         [HttpGet]
