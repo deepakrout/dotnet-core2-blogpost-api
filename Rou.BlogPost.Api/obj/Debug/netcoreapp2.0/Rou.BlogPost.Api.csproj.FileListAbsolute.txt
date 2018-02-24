@@ -1,0 +1,14 @@
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/bin/Debug/netcoreapp2.0/Rou.BlogPost.Api.deps.json
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/bin/Debug/netcoreapp2.0/Rou.BlogPost.Api.runtimeconfig.json
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/bin/Debug/netcoreapp2.0/Rou.BlogPost.Api.runtimeconfig.dev.json
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/bin/Debug/netcoreapp2.0/Rou.BlogPost.Api.dll
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/bin/Debug/netcoreapp2.0/Rou.BlogPost.Api.pdb
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/bin/Debug/netcoreapp2.0/Rou.BlogPost.Core.dll
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/bin/Debug/netcoreapp2.0/Rou.BlogPost.Model.dll
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/bin/Debug/netcoreapp2.0/Rou.BlogPost.Core.pdb
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/bin/Debug/netcoreapp2.0/Rou.BlogPost.Model.pdb
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/obj/Debug/netcoreapp2.0/Rou.BlogPost.Api.csproj.CoreCompileInputs.cache
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/obj/Debug/netcoreapp2.0/Rou.BlogPost.Api.AssemblyInfoInputs.cache
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/obj/Debug/netcoreapp2.0/Rou.BlogPost.Api.AssemblyInfo.cs
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/obj/Debug/netcoreapp2.0/Rou.BlogPost.Api.dll
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/obj/Debug/netcoreapp2.0/Rou.BlogPost.Api.pdb

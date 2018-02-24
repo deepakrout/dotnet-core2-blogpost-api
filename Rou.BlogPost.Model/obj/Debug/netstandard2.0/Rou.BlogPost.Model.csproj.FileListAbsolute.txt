@@ -1,0 +1,8 @@
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/bin/Debug/netstandard2.0/Rou.BlogPost.Model.deps.json
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/bin/Debug/netstandard2.0/Rou.BlogPost.Model.dll
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/bin/Debug/netstandard2.0/Rou.BlogPost.Model.pdb
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/obj/Debug/netstandard2.0/Rou.BlogPost.Model.csproj.CoreCompileInputs.cache
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/obj/Debug/netstandard2.0/Rou.BlogPost.Model.AssemblyInfoInputs.cache
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/obj/Debug/netstandard2.0/Rou.BlogPost.Model.AssemblyInfo.cs
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/obj/Debug/netstandard2.0/Rou.BlogPost.Model.dll
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/obj/Debug/netstandard2.0/Rou.BlogPost.Model.pdb
