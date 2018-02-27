@@ -22,8 +22,8 @@ namespace Rou.BlogPost.Core.Repositories {
             if (existing != null) _unitOfWork.Context.Set<T>().Remove (existing);
         }
 
-        public IEnumerable<T> Get () {
-            return _unitOfWork.Context.Set<T>().AsEnumerable<T> ();
+        public IQueryable<T> Get () {
+            return _unitOfWork.Context.Set<T>().AsQueryable<T> ();
         }
 
         public IQueryable<T> Get (Expression<Func<T, bool>> predicate) {

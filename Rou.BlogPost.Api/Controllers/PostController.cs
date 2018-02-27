@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Rou.BlogPost.Api.Interfaces;
+using Rou.BlogPost.Core.Infrastructure;
 using Rou.BlogPost.Model.Models;
 
 namespace Rou.BlogPost.Api.Controllers {
@@ -19,10 +20,11 @@ namespace Rou.BlogPost.Api.Controllers {
         [HttpGet]
         public IActionResult GetAll () {
             try {
+                _logger.LogInformation(LoggingEvents.GetItem,"Getting all posts");
                 var posts = _postService.GetPosts (0);
                 return Ok (posts);
             } catch (Exception ex) {
-                //TODO: Log error 
+                _logger.LogError(LoggingEvents.GetItem,ex,"Error retrieving posts");
                 return BadRequest ();
             }
 
@@ -31,13 +33,15 @@ namespace Rou.BlogPost.Api.Controllers {
         [HttpGet ("{id}", Name = "GetPost")]
         public IActionResult GetById (int id) {
             try {
-                var item = _postService.GetPosts (id).Where (a => a.PostId == id).FirstOrDefault ();
+                _logger.LogInformation(LoggingEvents.GetItem,"Get post by id {ID}",id);
+                var item = _postService.GetPosts (id);
                 if (item == null) {
+                    _logger.LogInformation(LoggingEvents.GetItem,"Post id: {ID} not found.",id);
                     return NotFound ();
                 }
                 return new ObjectResult (item);
             } catch (Exception ex) {
-                //TODO: loggerror
+                _logger.LogError(LoggingEvents.GetItem,ex,"Error getting Posts by id");
                 return BadRequest ();
             }
 
@@ -48,14 +52,16 @@ namespace Rou.BlogPost.Api.Controllers {
         [ProducesResponseType (typeof (Post), 400)]
         public IActionResult Create ([FromBody] Post item) {
             try {
+                _logger.LogInformation(LoggingEvents.GenerateItems,"Creating New Posts");
                 if (item == null) {
+                    _logger.LogInformation(LoggingEvents.GenerateItems,"NUll or Empty Posts. Not Created");
                     return BadRequest ();
                 }
                 var newBlog = _postService.CreatePost (item);
 
                 return CreatedAtRoute ("GetPost", new { id = item.PostId }, item);
             } catch (Exception ex) {
-                //TODO: log error
+                _logger.LogError(LoggingEvents.GenerateItems,ex,"Error Creating new Posts");
                 return BadRequest ();
             }
 

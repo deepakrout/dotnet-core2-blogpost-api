@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Rou.BlogPost.Api.Interfaces;
 using Rou.BlogPost.Api.Services;
 using Rou.BlogPost.Core.Interfaces;
 using Rou.BlogPost.Core.Repositories;
 using Rou.BlogPost.Model.DB;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Rou.BlogPost.Api {
     public class Startup {
@@ -37,7 +33,10 @@ namespace Rou.BlogPost.Api {
             services.AddMvc ().AddJsonOptions (options => {
                 options.SerializerSettings.ReferenceLoopHandling =
                     Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-            });;
+            });
+            services.AddSwaggerGen (c => {
+                c.SwaggerDoc ("v1", new Info { Title = "BlogPost api", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +46,12 @@ namespace Rou.BlogPost.Api {
 
             }
 
+            app.UseSwagger ();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI (c => {
+                c.SwaggerEndpoint ("/swagger/v1/swagger.json", "BlogPost api V1");
+            });
             app.UseMvc ();
         }
     }

@@ -27,10 +27,30 @@ namespace Rou.BlogPost.Api.Services
             return _blogRepository.Get(a=>a.BlogId == blog.BlogId).FirstOrDefault();
         }
 
-        public IEnumerable<Blog> GetBlogs(int? blogId =0 )
+        public void DeleteBlog(Blog blog)
         {
-            Expression<Func<Blog, bool>> pred = t=> blogId != 0 ? t.BlogId == blogId : t.BlogId == t.BlogId;
-            return _blogRepository.Get(pred).IncludeChild(a=>a.Posts);
+            if (blog != null){
+                _blogRepository.Delete(blog);
+                _unitOfWork.Commit();
+            }
+        }
+
+        public IQueryable<Blog> GetBlogs(int? blogId =0 )
+        {
+          //  Expression<Func<Blog, bool>> blogTerm = t=> blogId != 0 ? t.BlogId == blogId : t.BlogId == t.BlogId;
+           var blogTerm = PredicateBuilder.True<Blog>();
+            if (blogId != 0){
+              blogTerm = blogTerm.And(a=>a.BlogId == blogId);
+            }
+            return _blogRepository.Get(blogTerm).IncludeChild(a=>a.Posts);
+        }
+
+        public void UpdateBlog(Blog blog)
+        {
+            if (blog != null){
+                _blogRepository.Update(blog);
+                _unitOfWork.Commit();
+            }
         }
     }
 }

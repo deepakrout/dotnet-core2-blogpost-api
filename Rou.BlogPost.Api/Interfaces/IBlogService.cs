@@ -1,11 +1,16 @@
 using System.Collections.Generic;
+using System.Linq;
 using Rou.BlogPost.Model.Models;
 
 namespace Rou.BlogPost.Api.Interfaces
 {
     public interface IBlogService
     {
-         IEnumerable<Blog> GetBlogs(int? blogId);
+         IQueryable<Blog> GetBlogs(int? blogId);
          Blog CreateBlog(Blog blog);
+
+         void UpdateBlog(Blog blog);
+
+         void DeleteBlog(Blog blog);
     }
 }
