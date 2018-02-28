@@ -75,9 +75,11 @@ namespace Rou.BlogPost.Api.Controllers {
             try {
                 if (blog == null || blog.BlogId != id) {
                     _logger.LogWarning (LoggingEvents.UpdateItemNotFound, "Cannot update Null blog");
+                    Console.WriteLine("Can't update null blog");
                     return BadRequest ();
                 }
                 _logger.LogInformation ("Updating blog id {ID}", id);
+                Console.WriteLine("Updating blog id {0}", id);
                 _blogService.UpdateBlog (blog);
                 return Ok ();
             } catch (Exception ex) {

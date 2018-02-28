@@ -31,10 +31,17 @@ namespace Rou.BlogPost.Api.Services {
         }
 
         public Post CreatePost (Post post) {
-            _postRepository.Add (post);
-            _unitOfWork.Commit ();
-            var newPost = _postRepository.Get ().Where (a => a.PostId == post.PostId).FirstOrDefault ();
-            return newPost;
+            if (post != null ) {
+                _postRepository.Add (post);
+                _unitOfWork.Commit ();
+                var newPost = _postRepository.Get (a=> a.PostId == post.PostId).FirstOrDefault ();
+                return newPost;
+            }
+            else{
+                _logger.LogError(LoggingEvents.GenerateItems,"post not created. Null posts passed  ");
+                return new Post();
+            }
+            
         }
 
         public void UpdatePost(Post post)

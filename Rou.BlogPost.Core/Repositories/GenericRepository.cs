@@ -31,8 +31,8 @@ namespace Rou.BlogPost.Core.Repositories {
         }
 
         public void Update (T entity) {
-            _unitOfWork.Context.Entry (entity).State = EntityState.Modified;
             _unitOfWork.Context.Set<T>().Attach (entity);
+            _unitOfWork.Context.Entry (entity).State = EntityState.Modified;            
         }
     }
 }
