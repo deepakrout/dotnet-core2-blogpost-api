@@ -6,3 +6,4 @@
 /Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/obj/Debug/netstandard2.0/Rou.BlogPost.Model.AssemblyInfo.cs
 /Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/obj/Debug/netstandard2.0/Rou.BlogPost.Model.dll
 /Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/obj/Debug/netstandard2.0/Rou.BlogPost.Model.pdb
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Model/obj/Debug/netstandard2.0/Rou.BlogPost.Model.csprojResolveAssemblyReference.cache

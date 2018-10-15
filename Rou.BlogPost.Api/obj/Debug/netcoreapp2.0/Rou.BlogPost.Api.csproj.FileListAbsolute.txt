@@ -12,3 +12,4 @@
 /Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/obj/Debug/netcoreapp2.0/Rou.BlogPost.Api.AssemblyInfo.cs
 /Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/obj/Debug/netcoreapp2.0/Rou.BlogPost.Api.dll
 /Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/obj/Debug/netcoreapp2.0/Rou.BlogPost.Api.pdb
+/Users/deepakrout/Home/DotNetProjects/Rou.BlogPost.Sol/Rou.BlogPost.Api/obj/Debug/netcoreapp2.0/Rou.BlogPost.Api.csprojResolveAssemblyReference.cache
